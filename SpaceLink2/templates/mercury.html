@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/mercury.css' %}">
+    <title>Mercury</title>
+</head>
+<body>
+    <section>
+        <div class="planet"></div>
+    </section>
+
+    <div class="aboutPlanet">
+        <h1>MERCURY</h1>
+        <p id="textContent"></p>
+        <button type="button" class="btn" id="btn" onclick="speech()">
+            <img class="speechbutton" src="https://cdn-icons-png.flaticon.com/512/26/26706.png" alt="Speech">
+        </button>
+    </div>
+
+    <footer>
+        <a href="index"><button type="button">HOME</button></a>
+        <a href="sun"><button type="button">SUN</button></a>
+        <a href="mercury"><button>MERCURY</button></a>
+        <a href="venus"><button>VENUS</button></a>
+        <a href="earth"><button>EARTH</button></a>
+        <a href="moon"><button>MOON</button></a>
+        <a href="mars"><button>MARS</button></a>
+        <a href="jupiter"><button>JUPITER</button></a>
+        <a href="saturn"><button>SATURN</button></a>
+        <a href="uranus"><button>URANUS</button></a>
+        <a href="neptune"><button>NEPTUNE</button></a>
+        <a href="pluto"><button>PLUTO</button></a>
+    </footer>
+
+    <script>
+        let textTag = document.getElementById("textContent");
+        let textCtnt = `The smallest planet in our solar system and nearest to the Sun, Mercury is only slightly larger than Earth's Moon.
+        From the surface of Mercury, the Sun would appear more than three times as large as it does when viewed from Earth, and the sunlight would be as much as seven times brighter.`;
+        let idx = 1;
+        let speed = 45;
+
+        writeText();
+
+        function writeText() {
+            textTag.innerText = textCtnt.slice(0, idx);
+            idx++;
+            if (idx <= textCtnt.length) {
+                setTimeout(writeText, speed);
+            }
+        }
+
+        function speech() {
+            const text = new SpeechSynthesisUtterance(textCtnt);
+            speechSynthesis.speak(text);
+        }
+    </script>
+</body>
+</html>

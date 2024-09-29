@@ -1,0 +1,150 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;500&display=swap');
+
+/* Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0c10; /* Dark space-like background */
+    color: #ffffff; /* White text for contrast */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    height: 100vh; /* Ensure body takes full viewport height */
+}
+
+/* Space Animation Elements */
+.stars, .stars2, .stars3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.stars {
+    background: url('./img/stars.png') repeat;
+    animation: move-stars 200s linear infinite;
+}
+
+.stars2 {
+    background: url('./img/stars2.png') repeat;
+    opacity: 0.5;
+    animation: move-stars2 300s linear infinite;
+}
+
+.stars3 {
+    background: url('./img/stars3.png') repeat;
+    opacity: 0.2;
+    animation: move-stars3 400s linear infinite;
+}
+
+@keyframes move-stars {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+}
+
+@keyframes move-stars2 {
+    from { background-position: 0 0; }
+    to { background-position: -20000px 10000px; }
+}
+
+@keyframes move-stars3 {
+    from { background-position: 0 0; }
+    to { background-position: -30000px 15000px; }
+}
+
+/* Booking Container Styling */
+.booking-container {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto; /* Adjusted margin to fit within viewport */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Glowing effect */
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+/* Ensure Booking Container Fits within Viewport */
+.booking-container {/* Ensure it doesn't overflow the viewport height */
+    overflow-y: auto; /* Allow vertical scrolling if needed */
+}
+
+/* Heading and Promo Section */
+.booking-container h1 {
+    font-family: 'Audiowide', cursive;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.promo {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #ffffff;
+}
+
+.promo strong {
+    color: #ffcc00; /* Highlight the promo code */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #ffffff;
+}
+
+.form-group input[type="radio"], 
+.form-group input[type="number"], 
+.form-group select, 
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #111;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffffff; /* White button */
+    color: #111;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #f0f0f0; /* Slightly darker white on hover */
+    color: #111;
+}

@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href = "{% static 'css/booking.css' %}">
+    <title>Space Tourism Booking</title>
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="stars2"></div>
+    <div class="stars3"></div>
+
+    <div class="booking-container">
+        <h1>Space Tourism Booking</h1>
+
+        <div class="promo">
+            <p>Use promocode <strong>SPACELINK2024</strong> to get flat 15% off on your first space journey!</p>
+        </div>
+
+        <form id="bookingForm">
+            <div class="trip-type">
+                <input type="radio" id="oneWay" name="tripType" value="oneWay" checked>
+                <label for="oneWay">One Way</label>
+                <input type="radio" id="roundTrip" name="tripType" value="roundTrip">
+                <label for="roundTrip">Round Trip</label>
+            </div>
+
+            <div class="form-group">
+                <label for="from">From</label>
+                <select id="from" name="from">
+                    <option value="earth">Earth</option>
+                    <option value="moon">Moon</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="to">To</label>
+                <select id="to" name="to">
+                    <option value="moon">Moon</option>
+                    <option value="mars">Mars</option>
+                    <option value="jupiter">Jupiter</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="date">Departure Date</label>
+                <input type="date" id="date" name="date">
+            </div>
+
+            <div class="form-group">
+                <label for="flightType">Flight Type</label>
+                <select id="flightType" name="flightType">
+                    <option value="suborbital">Suborbital Flight</option>
+                    <option value="moonlanding">Moon Landing</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="rocketType">Rocket Type</label>
+                <select id="rocketType" name="rocketType">
+                    <option value="falcon9">Falcon 9</option>
+                    <option value="starship">Starship</option>
+                    <option value="newGlenn">New Glenn</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="passengers">Passengers</label>
+                <input type="number" id="passengers" name="passengers" value="1">
+            </div>
+
+            <button type="submit">Search Rockets</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
