@@ -1,0 +1,165 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and background */
+body {
+    background: url('https://wallpapercave.com/wp/wp3493599.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Section styles */
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Planet styles */
+.planet {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    background: url('https://planetary.s3.amazonaws.com/web/assets/pictures/20180517_GlobalColor2017_equi_64ppd_1000_750_430_10percent.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    box-shadow: inset 50px 0 10px rgba(0, 0, 0, 0.541), 0 0 30px grey;
+    animation: rotation 55s linear infinite;
+}
+
+/* Keyframe animations */
+@keyframes rotation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1280px 0;
+    }
+}
+
+/* About planet section */
+.aboutPlanet {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f0f0f0;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Heading */
+.aboutPlanet h1 {
+    color: rgb(246, 248, 102);
+    text-shadow: 2px 2px 10px black;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Paragraph */
+.aboutPlanet p {
+    color: rgb(177, 177, 194);
+    text-shadow: 2px 2px 10px black;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    width: 300px;
+}
+
+/* Button styles */
+.btn {
+    height: 30px;
+    width: 80px;
+    color: cyan;
+    background-color: rgb(100, 22, 173);
+    border: 2px solid black;
+    border-radius: 20px;
+    text-shadow: 0 0 10px black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: blueviolet;
+    transform: scale(1.1);
+}
+
+.btn:active {
+    transform: scale(0.92);
+}
+
+.speechbutton {
+    width: 30%;
+}
+
+/* Footer styling */
+footer {
+    position: fixed;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+footer a {
+    margin: 5px;
+}
+
+footer button {
+    height: 30px;
+    width: 80px;
+    padding: 5px;
+    color: cyan;
+    background-color: rgb(100, 22, 173);
+    border: 2px solid black;
+    border-radius: 20px;
+    text-shadow: 0 0 10px black;
+}
+
+footer button:hover {
+    background-color: blueviolet;
+    transform: scale(1.1);
+}
+
+footer button:active {
+    transform: scale(0.92);
+}
+
+/* Responsive Design */
+@media screen and (orientation: portrait) {
+    .aboutPlanet {
+        width: 90%;
+        top: 5%;
+        left: 5%;
+    }
+
+    .aboutPlanet h1 {
+        font-size: x-large;
+    }
+
+    .aboutPlanet p {
+        font-size: 15px;
+    }
+
+    .btn {
+        width: 100px;
+    }
+}

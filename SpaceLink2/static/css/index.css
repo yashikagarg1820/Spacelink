@@ -1,0 +1,324 @@
+/* Resetting default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    background-color: black;
+    overflow-x: hidden;
+}
+
+.main-content {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+
+.page {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+#page1 {
+    background: url('https://wallpapercave.com/wp/wp3493599.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: move-bg 20s infinite linear;
+}
+
+@keyframes move-bg {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Header with animation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    animation: slide-down 1s ease-out;
+}
+
+@keyframes slide-down {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.logo{
+    display: flex;
+    justify-content: space-between;
+    width: 200px;
+    line-height: 40px;
+    text-align: center;
+    align-items: center;
+}
+.logo h2 {
+    font-family: "Syncopate-Bold";
+    font-weight: 1500;
+    font-size: 30px;
+    color: #fff;
+    transition: transform 0.3s;
+}
+
+.logo h2:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+.logo img{
+    height: 50px;
+    border-radius: 50%;
+}
+.nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.nav ul li {
+    font-family: "Syncopate-Bold";
+    font-weight: 800;
+    font-size: 18px;
+    margin-left: 40px;
+}
+
+.nav ul li a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: white;  /* Neon green to match the space theme */
+    text-decoration: none;  /* Remove default underline */
+    transition: color 0.3s ease;  /* Smooth transition for hover */
+}
+
+.nav ul li a:hover {
+    color: #1E90FF;  /* Change to a space-like blue on hover */
+}
+
+.search-bar-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    width: 250px;
+    padding: 10px;
+    padding-left: 40px;  /* Add padding to the left to make room for the icon */
+    font-size: 16px;
+    border: 1px solid rgb(255, 254, 255);
+    border-radius: 5px;
+    background-image: url('https://static-00.iconduck.com/assets.00/search-icon-2044x2048-psdrpqwp.png');  /* Replace with your icon URL */
+    background-position: 10px center;  /* Position the icon inside the input */
+    background-repeat: no-repeat;
+    background-size: 20px 20px; 
+    background-color: transparent;
+    width: 15%;
+    transition: 0.5s ease-in-out;
+    color: white;
+}
+
+.search-bar:hover {
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #8DA4EA;
+    outline: none;
+    width: 40%;
+}
+
+.social-icons img {
+    width: 30px;
+    margin: 0 10px;
+    transition: transform 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
+}
+
+/* Side content */
+.side-content {
+    color: white;
+    width: 80%;
+    text-align: center;
+}
+
+.subtitle1 {
+    font-family: 'Audiowide', cursive;
+    font-size: 64px;
+    font-weight: bold;
+}
+
+.subtitle2 {
+    font-family: 'poppins', cursive;
+    font-size: 48px;
+}
+
+.scroll-btn {
+    font-family: 'Audiowide', cursive;
+    font-size: 20px;
+    color: #ffffff;
+    background-color: #333333;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.scroll-btn:hover {
+    background-color: #6A8AE6;
+    transform: scale(1.1);
+}
+
+/* Section 2 */
+.details-content {
+    text-align: center;
+    color: white;
+    padding: 50px;
+}
+
+.details-content h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.details-content p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+.planet-buttons button {
+    height: 40px;
+    background-color: black;
+    color: white;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding: 10px;
+    transition: 0.3s ease-in;
+}
+
+.planet-buttons button:hover{
+    background-color: white;
+    color: black;
+}
+
+/* Scroll bar details */
+/* Change the width of the scrollbar */
+::-webkit-scrollbar {
+    width: 5px;  /* Adjust the width as needed */
+}
+
+/* Change the color of the scrollbar track */
+::-webkit-scrollbar-track {
+    background: #000000;  /* Light grey */
+}
+
+/* Change the color of the scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background-color: #3a009f;  /* Dark grey */
+    border-radius: 10px;  /* Rounded corners */
+    border: 3px solid #3b007a;  /* Adds padding around the thumb */
+}
+
+/* Change the color of the scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;  /* Darker grey when hovering */
+}
+
+/* footer section */
+footer {
+    background-color: #0b0c10;  /* Dark background for a space-like theme */
+    color: #ffffff;  /* White text for contrast */
+    padding: 40px 0;
+    font-family: 'Poppins', sans-serif;  /* Modern, clean font */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;  /* Responsive layout for smaller screens */
+}
+
+.footer-column {
+    flex: 1;
+    margin: 0 20px;
+    min-width: 200px;  /* Ensures columns don't get too narrow */
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: white;  /* Neon green for futuristic feel */
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: white;  /* Highlight links on hover */
+}
+
+.social-icons {
+    display: flex;
+    gap: 10px;
+}
+.social-icons a{
+    text-decoration: none;
+}
+.social-icons a img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a img:hover {
+    transform: scale(1.2);  /* Enlarge social icons on hover */
+}
+
+.footer-column p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #cccccc;  /* Lighter gray for body text */
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-column {
+        margin-bottom: 30px;
+    }
+}

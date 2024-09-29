@@ -1,0 +1,149 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;500&display=swap');
+
+/* Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #0b0c10; /* Dark space-like background */
+    color: #ffffff; /* White text for contrast */
+    overflow: auto; /* Ensure scrolling if needed */
+    height: 100vh; /* Ensure body takes full viewport height */
+    margin: 0; /* Remove default margin */
+}
+
+/* Space Animation Elements */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.stars, .twinkling, .clouds {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.stars {
+    background: url('./img/stars.png') repeat;
+}
+
+.twinkling {
+    background: url('./img/twinkling.png') repeat;
+    animation: move-twinkling 200s linear infinite;
+}
+
+.clouds {
+    background: url('./img/clouds.png') repeat;
+    opacity: 0.2;
+    animation: move-clouds 300s linear infinite;
+}
+
+@keyframes move-twinkling {
+    from { background-position: 0 0; }
+    to { background-position: -10000px 5000px; }
+}
+
+@keyframes move-clouds {
+    from { background-position: 0 0; }
+    to { background-position: 10000px 10000px; }
+}
+
+/* Registration Form Styling */
+.registration-form {
+    position: relative;
+    z-index: 1;
+    width: 400px;
+    margin: 50px auto; /* Adjust margin for better centering */
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Glowing effect */
+    backdrop-filter: blur(5px);
+    text-align: center;
+}
+
+.registration-form h1 {
+    font-family: 'Audiowide', cursive;
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.registration-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #ffffff;
+    text-align: left; /* Align labels to the left */
+}
+
+.registration-form input {
+    width: calc(100% - 22px); /* Adjust width to account for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    background-color: #111;
+    border-radius: 5px;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.registration-form input:focus {
+    border-color: #ffffff; /* Highlight border on focus */
+    outline: none;
+    box-shadow: 0 0 10px #ffffff;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #ffffff; /* White button */
+    color: #111;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #f0f0f0; /* Slightly darker white on hover */
+    color: #111;
+}
+
+
+/* styles.css */
+
+.messages {
+    margin: 20px 0;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
