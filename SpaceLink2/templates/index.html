@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <title>Space Exploration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Main Wrapper to Enable Smooth Scrolling -->
+    <div class="main-content">
+        <!-- Section 1: Introduction -->
+        <section id="page1" class="page">
+            <header>
+                <div class="logo">
+                    <h2><i>SpaceLink</i></h2>
+                    <img src="https://thumbs.dreamstime.com/b/rocket-icon-space-ship-vector-symbol-white-background-252945394.jpg" alt="">
+                </div>
+                <div class="search-bar-container">
+                    <input type="text" class="search-bar" placeholder="Search : The universe...">
+                </div>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="{% url 'login' %}">Log In</a></li>
+                        <li><a href="registration">Registration</a></li>
+                        <li><a href="booking">Shuttle Booking</a></li>
+                        <li><a href="profile">Store</a></li>
+                        <li><a href="about">About</a></li>
+                    </ul>
+                </nav>
+                {% comment %} <div class="social-icons">
+                    <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                    <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                </div> {% endcomment %}
+            </header>
+
+            <div class="side-content">
+                <h1 class="subtitle1"> Welcome to SPACELINK:</h1>
+                <p class="subtitle2"> Your Gateway to the Stars!</p>
+                <br>
+                <a href="#page2" class="scroll-btn">Explore More</a>
+            </div>
+        </section>
+
+        <!-- Section 2: Detailed Info -->
+        <section id="page2" class="page">
+            <div class="details-content">
+                <h2>Discover the Wonders of Our Universe</h2>
+                <p>From the fiery sun to the cold depths of Neptune, SpaceLink is your gateway to explore the solar system.</p>
+                <div class="planet-buttons">
+                    <a href="sun"><button>SUN</button></a>
+                    <a href="earth"><button>EARTH</button></a>
+                    <a href="mars"><button>MARS</button></a>
+                    <a href="jupiter"><button>JUPITER</button></a>
+                    <a href="venus"><button>VENUS</button></a>
+                    <a href="uranus"><button>URANUS</button></a>
+                    <a href="saturn"><button>SATURN</button></a>
+                    <a href="pluto"><button>PLUTO</button></a>
+                    <a href="moon"><button>MOON</button></a>
+                    <!-- Add more planets as desired -->
+                </div>
+                <br><br>
+                <a href="#page1" class="scroll-btn">Back to Top</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <ul>
+                        <li><a href="sun">Sun</a></li>
+                        <li><a href="earth">Earth</a></li>
+                        <li><a href="mars">Mars</a></li>
+                        <li><a href="jupyter">jupyter</a></li>
+                        <li><a href="venus">venus</a></li>
+                        <li><a href="uranus">uranus</a></li>
+                        <li><a href="sun">Planets</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <div class="social-icons">
+                        <a href="#"><img src="img/twitter.png" alt="Twitter"></a>
+                        <a href="#"><img src="img/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>About</h3>
+                    <p>SpaceLink offers you the latest news and developments in space exploration, missions, and beyond.</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        document.querySelectorAll('a.scroll-btn').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
